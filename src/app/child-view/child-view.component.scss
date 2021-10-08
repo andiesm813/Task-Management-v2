@@ -1,0 +1,39 @@
+:host {
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+}
+.column-layout {
+  align-items: stretch;
+  position: relative;
+  padding: 20px;
+  background-color: var(--igx-error-500);
+  min-height: 50px;
+  min-width: 50px;
+}
+.card {
+  min-width: 320px;
+  width: 320px;
+  height: max-content;
+}
+.actions {
+  min-height: 40px;
+  min-width: 50px;
+}
+.content {
+  min-height: 50px;
+  min-width: 50px;
+}
+.text {
+  height: max-content;
+  min-width: min-content;
+  white-space: pre-wrap;
+}
+.button {
+  height: max-content;
+  min-width: min-content;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
