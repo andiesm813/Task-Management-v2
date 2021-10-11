@@ -1,0 +1,108 @@
+<igx-navbar class="navigation-bar">
+  <button igxButton="icon" igxButtonColor="var(--igx-grays-900)" type="icon" [disabled]="false" igxNavbarAction>
+    <igx-icon>home</igx-icon>
+  </button>
+  <div igxNavbarTitle>My Kanban App</div>
+  <button igxButton="icon" igxButtonColor="var(--igx-grays-900)" type="icon" [disabled]="false">
+    <igx-icon>add_circle</igx-icon>
+  </button>
+  <button igxButton="icon" igxButtonColor="var(--igx-grays-900)" type="icon" [disabled]="false">
+    <igx-icon>share</igx-icon>
+  </button>
+  <button igxButton="icon" igxButtonColor="var(--igx-grays-900)" type="icon" [disabled]="false">
+    <igx-icon>notifications</igx-icon>
+  </button>
+  <button igxButton="icon" igxButtonColor="var(--igx-grays-900)" type="icon" [disabled]="false">
+    <igx-icon>search</igx-icon>
+  </button>
+  <button igxButton="icon" igxButtonColor="var(--igx-grays-900)" type="icon" [disabled]="false">
+    <igx-icon>account_circle</igx-icon>
+  </button>
+</igx-navbar>
+<div class="layout row">
+  <div class="layout column">
+    <div class="row-layout row">
+      <div class="row-layout_1 row">
+        <igx-avatar initials="FP" bgColor="#FE7659" [roundShape]="true" size="small" class="avatar"></igx-avatar>
+        <h6 class="title">Fintech Project</h6>
+        <button igxButton="icon" type="icon" [disabled]="false" [igxToggleAction]="dropDown" class="icon-button">
+          <igx-icon>keyboard_arrow_down</igx-icon>
+        </button>
+        <igx-drop-down height="max-content" #dropDown class="drop-down">
+          <igx-drop-down-item [isHeader]="true" [disabled]="false">
+            Projects
+          </igx-drop-down-item>
+          <igx-drop-down-item [disabled]="false" [isHeader]="false">
+            Fintech Project
+          </igx-drop-down-item>
+          <igx-drop-down-item [disabled]="false" [isHeader]="false">
+            My Project Name 2
+          </igx-drop-down-item>
+          <igx-drop-down-item [disabled]="false" [isHeader]="false">
+            My Project Name 3
+          </igx-drop-down-item>
+          <igx-drop-down-item [disabled]="false" [isHeader]="false">
+            My Project Name 4
+          </igx-drop-down-item>
+        </igx-drop-down>
+      </div>
+      <igx-buttongroup alignment="horizontal" [disabled]="false" class="button-group">
+        <button igxButton [disabled]="false" routerLink="/master-view/kanban-view">
+          <igx-icon>dashboard</igx-icon>
+          <span>Kanban</span>
+        </button>
+        <button igxButton [disabled]="false" routerLink="/master-view/list-view">
+          <igx-icon>list</igx-icon>
+          <span>list</span>
+        </button>
+        <button igxButton [disabled]="false" routerLink="/master-view/child-view">
+          <igx-icon>account_circle</igx-icon>
+          <span>TEST</span>
+        </button>
+        <button igxButton [disabled]="false" routerLink="/master-view1">
+          <igx-icon>account_circle</igx-icon>
+          <span>MASTER VIEW</span>
+        </button>
+      </igx-buttongroup>
+    </div>
+    <div class="views-container">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <igx-nav-drawer width="320px" [pin]="true" [pinThreshold]="1024" position="left" [isOpen]="false" *ngIf="navigationDrawerVisible" class="navigation-drawer">
+    <ng-template igxDrawer>
+      <span [isHeader]="false" igxDrawerItem>
+        <igx-icon font="material" [active]="true">account_circle</igx-icon>
+        <span class="nav-item-title">Title goes here</span>
+      </span>
+    </ng-template>
+    <ng-template igxDrawerMini>
+      <span [isHeader]="false" igxDrawerItem>
+        <igx-icon font="material" [active]="true">notifications_active</igx-icon>
+      </span>
+      <span [isHeader]="false" igxDrawerItem>
+        <igx-icon font="material" [active]="true" color="var(--igx-grays-600)" class="icon_1">account_circle</igx-icon>
+      </span>
+      <span [isHeader]="false" igxDrawerItem>
+        <igx-icon font="material" [active]="true" color="var(--igx-grays-600)" class="icon_1">account_circle</igx-icon>
+      </span>
+      <span [isHeader]="false" igxDrawerItem>
+        <igx-icon font="material" [active]="true" color="var(--igx-grays-600)" class="icon_1">account_circle</igx-icon>
+      </span>
+      <span [isHeader]="false" igxDrawerItem>
+        <igx-icon font="material" [active]="true" color="var(--igx-success-500)" class="icon_1">add_circle</igx-icon>
+      </span>
+    </ng-template>
+  </igx-nav-drawer>
+  <div class="column-layout column">
+    <igx-icon font="material" [active]="true" class="icon">group_add</igx-icon>
+    <igx-avatar src="https://d3cg6cexo8t5ug.cloudfront.net/avatars/avatar2.png" [roundShape]="true" size="small" class="avatar_1"></igx-avatar>
+    <igx-avatar src="https://d3cg6cexo8t5ug.cloudfront.net/avatars/avatar6.png" [roundShape]="true" size="small" class="avatar_1"></igx-avatar>
+    <igx-avatar src="https://d3cg6cexo8t5ug.cloudfront.net/avatars/avatar5.png" [roundShape]="true" size="small" class="avatar_1"></igx-avatar>
+    <igx-avatar src="https://d3cg6cexo8t5ug.cloudfront.net/avatars/avatar3.png" [roundShape]="true" size="small" class="avatar_1"></igx-avatar>
+    <igx-avatar src="https://d3cg6cexo8t5ug.cloudfront.net/avatars/avatar7.png" [roundShape]="true" size="small" class="avatar_1"></igx-avatar>
+    <igx-avatar src="https://d3cg6cexo8t5ug.cloudfront.net/avatars/avatar8.png" [roundShape]="true" size="small" class="avatar_1"></igx-avatar>
+    <igx-avatar src="https://d3cg6cexo8t5ug.cloudfront.net/avatars/avatar9.png" [roundShape]="true" size="small" class="avatar_1"></igx-avatar>
+    <igx-avatar src="https://d3cg6cexo8t5ug.cloudfront.net/avatars/avatar10.png" [roundShape]="true" size="small" class="avatar_1"></igx-avatar>
+  </div>
+</div>
