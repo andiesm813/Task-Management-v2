@@ -41,19 +41,19 @@
   border-width: 0px 3px 0px 0px;
   border-style: solid;
   align-items: stretch;
+  min-width: 280px;
   background-color: var(--igx-grays-100);
   position: relative;
   min-height: 50px;
   flex: 1 1 0;
-  min-width: 50px;
 }
 .column-layout_1 {
   align-items: stretch;
+  min-width: 280px;
   background-color: var(--igx-grays-100);
   position: relative;
   min-height: 50px;
   flex: 1 1 0;
-  min-width: 50px;
 }
 .card {
   margin: 16px;
